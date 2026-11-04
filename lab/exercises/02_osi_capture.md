@@ -125,14 +125,14 @@ nombre (ex. `52790`) : qui l'a choisi, et pourquoi n'est-il pas toujours le mêm
 
 > 💬 **Votre réponse :**
 >
-> _Le port destination 80 désigne le service HTTP. Le port source (ici `59832` dans ma capture) est un port éphémère choisi par le système d'exploitation du client au moment où il ouvre la connexion. Il n'est pas toujours le même car l'OS en attribue un nouveau, libre, dans la plage des ports dynamiques (> 1024) à chaque nouvelle connexion. Cela permet de distinguer plusieurs connexions simultanées vers un même serveur, puisqu'une connexion TCP est identifiée par le quadruplet IP source / port source / IP destination / port destination._
+> _Le port destination 80 désigne le service HTTP. Le port source est un port éphémère choisi par le système d'exploitation du client au moment où il ouvre la connexion. Il n'est pas toujours le même car l'OS attribue un nouveau port dynamiquement à chaque nouvelle connexion.
 
 **Question B.3.** La **MAC destination** est-elle celle du site web `internet` ? À quelle machine
 appartient-elle ? (Comparez avec `ip neigh` dans le terminal client, et repensez à l'exercice 1.)
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _La MAC destination est celle de la passerelle du routeur._
 
 ### Étape 6 — Comparer avec un paquet sans HTTP
 

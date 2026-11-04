@@ -141,7 +141,7 @@ Retenez ce résultat, il sera expliqué dans l'exercice 4 !
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _docker compose ps_
 
 **Question 2.** Comment savez-vous, en regardant l'écran, que vous êtes dans le terminal du client et non dans celui de Codespace ?
 

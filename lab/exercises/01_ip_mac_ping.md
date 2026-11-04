@@ -162,7 +162,7 @@ Dessinez (en texte) le chemin suivi : `client → … → internet`.
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _Il y a deux sauts. L'adresse du premier saut est: 172.20.1.254. le chemin suivi est: client -> routeur -> site web_
 
 ### Étape 8 — Le lab est isolé
 
@@ -176,7 +176,7 @@ ping -c 2 -W 2 8.8.8.8
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _Le ping vers le DNS de Google retourne "Destination Net Unreachable" car le routeur du lab est isolé, il n'a pas d'interface relié à internet."_
 
 ---
 
@@ -186,18 +186,18 @@ ping -c 2 -W 2 8.8.8.8
 
 | Notion        | Explication en une phrase |
 | ------------- | ------------------------- |
-| Adresse IP    | …                         |
-| Adresse MAC   | …                         |
-| Passerelle    | …                         |
-| ARP           | …                         |
-| TTL           | …                         |
+| Adresse IP    | permet d'identifier une machine sur un réseau|
+| Adresse MAC   | permet d'identifier des machines sur un réseau local et de pouvoir communiquer avec elles|
+| Passerelle    | elle permet d'acheminer notre trame à destination de machines en dehors de notre réseau|
+| ARP           | permet d'associer une adresse IP et une adresse MAC|
+| TTL           | nombre qui indique le nombre de routeur passés par une trame|
 
 **Question D.2.** Vrai ou faux ? Justifiez : « Pour envoyer un paquet à `172.20.0.10`, le client met
 dans la trame la MAC de `172.20.0.10`. »
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _Faux. Il met dans la trame la MAC de la passerelle._
 
 ---
 

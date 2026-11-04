@@ -122,7 +122,7 @@ a-t-il appris la MAC ? Expliquez pourquoi, en vous aidant de la fiche théorique
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _Le client a appris la MAC de 172.20.1.254 qui est la passerelle par défaut du client. Il a appris cette MAC car la destination est hors de son réseau donc il doit d'abord passer par sa passerelle par défaut (routeur) pour pouvoir atteindre la destination "finale"._
 
 ---
 
@@ -142,7 +142,10 @@ cette différence ? (Indice : chaque routeur traversé diminue le TTL de 1.)
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _ping 172.20.0.10 (site web): ttl=63
+> ping 172.20.1.254 (routeur): ttl=64
+> La différence est que le routeur est dans le même réseau que le client donc le ping ne passe par aucun routeur le TTL reste à 64.
+> Tandis que le site web n'est pas dans le même réseau que le client donc le ping doit passer par un ou plusieurs routeurs pour atteindre la cible. Le ttl diminue de 1 pour chaque routeur passé, dans notre pour le ping du site web le ttl est de 63 donc le ping est passé par un routeur._
 
 ### Étape 7 — traceroute
 

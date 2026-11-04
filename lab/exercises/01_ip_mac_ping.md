@@ -143,8 +143,8 @@ cette différence ? (Indice : chaque routeur traversé diminue le TTL de 1.)
 > 💬 **Votre réponse :**
 >
 > _ping 172.20.0.10 (site web): ttl=63
-> ping 172.20.1.254 (routeur): ttl=64
-> La différence est que le routeur est dans le même réseau que le client donc le ping ne passe par aucun routeur le TTL reste à 64.
+> & ping 172.20.1.254 (routeur): ttl=64.
+>  La différence est que le routeur est dans le même réseau que le client donc le ping ne passe par aucun routeur le TTL reste à 64.
 > Tandis que le site web n'est pas dans le même réseau que le client donc le ping doit passer par un ou plusieurs routeurs pour atteindre la cible. Le ttl diminue de 1 pour chaque routeur passé, dans notre pour le ping du site web le ttl est de 63 donc le ping est passé par un routeur._
 
 ### Étape 7 — traceroute

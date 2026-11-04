@@ -142,12 +142,15 @@ appartient-elle ? (Comparez avec `ip neigh` dans le terminal client, et repensez
 ./lab/exercises/osi_inspect.py 1
 ```
 
-**Question B.4.** Recopiez la ligne `Pile présente : …` des paquets 1 et 4. Quelle couche manque
-dans le paquet 1 ? Pourquoi ?
+**Question B.4.** Recopiez la ligne `Pile présente : …` des paquets 1 et 4. Quelle couche manque dans le paquet 1 ? Pourquoi ?
 
-> 💬 **Votre réponse :**
+> 💭 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _Paquet 1 : Pile présente : eth > ip > tcp_
+>
+> _Paquet 4 : Pile présente : eth > ip > tcp > http_
+>
+> _Il manque la couche 7 (Application, HTTP) dans le paquet 1. Il manque la couche 7 (HTTP) dans le paquet 1. C'est le `SYN`, qui sert seulement à ouvrir la connexion TCP et ne contient aucune donnée. La requête HTTP n'est envoyée qu'après, dans le paquet 4._
 
 ### Étape 7 — Regarder la réponse du serveur
 

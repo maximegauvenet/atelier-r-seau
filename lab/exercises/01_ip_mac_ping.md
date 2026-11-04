@@ -35,18 +35,18 @@ sur la ligne `inet` se trouvent l'**adresse IP** et le **masque** (après le `/`
 
 | Information        | Valeur pour le client |
 | ------------------ | --------------------- |
-| Nom de l'interface | …                     |
-| Adresse MAC        | …                     |
-| Adresse IP         | …                     |
-| Masque (notation `/`) | …                  |
-| Adresse du réseau  | …                     |
+| Nom de l'interface | eth0@if33             |
+| Adresse MAC        | 36:c7:11:ca:ca:cb     |
+| Adresse IP         | 172.20.1.50           |
+| Masque (notation `/`) |172.20.1.50/24      |
+| Adresse du réseau  | 172.20.1.0            |
 
 **Question A.2.** Le masque est `/24`. Combien de machines différentes peut-on placer dans ce réseau ?
 (Indice : le dernier nombre de l'adresse peut varier de 0 à 255, mais 2 valeurs sont réservées.)
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _On peut placer dans ce réseau 254_
 
 ### Étape 2 — Ma passerelle
 
@@ -65,7 +65,7 @@ ip route
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _L'adresse de la passerelle du client est 172.20.1.254, cette adresse correspond au routeur._
 
 ---
 
@@ -104,7 +104,8 @@ eu besoin de cette information **avant** de pouvoir envoyer le ping ?
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _La nouvelle ligne apparue est 172.20.1.2 dev eth0 lladdr 06:b2:1c:4d:28:f9 REACHABLE.
+Elle contient l'ip du DHCP, l'interface de l'ip et l'adresse MAC du serveur DHCP_
 
 ### Étape 5 — Joindre une machine d'un autre réseau
 

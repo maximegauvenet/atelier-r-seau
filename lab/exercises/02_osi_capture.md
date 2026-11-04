@@ -80,14 +80,16 @@ indicateurs `[SYN]`, `[SYN, ACK]`, `[ACK]`. Comment s'appelle cet échange, et �
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _C'est le Handshake TCP, il sert à établir une connexion TCP entre un client et un serveur._
 
 **Question A.2.** Repérez le numéro du paquet contenant la **requête** `GET /` et celui contenant
 la **réponse** `200 OK`. Qui envoie chacun d'eux (IP source) ?
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _Le paquet contenant la requête "GET /" est envoyée par le client (172.20.1.50)
+>
+> Le paquet contenant la réponse "200 OK" est envoyée par le serveur (172.20.0.10)_
 
 ---
 
@@ -106,24 +108,24 @@ la **réponse** `200 OK`. Qui envoie chacun d'eux (IP source) ?
 
 **Question B.1.** Complétez le tableau avec les valeurs de **votre** capture :
 
-| Couche OSI         | Protocole | Champ observé       | Valeur dans ma capture |
-| ------------------ | --------- | ------------------- | ---------------------- |
-| 7 — Application    | HTTP      | Méthode et chemin   | …                      |
-| 4 — Transport      | TCP       | Port source         | …                      |
-| 4 — Transport      | TCP       | Port destination    | …                      |
-| 3 — Réseau         | IPv4      | IP source           | …                      |
-| 3 — Réseau         | IPv4      | IP destination      | …                      |
-| 3 — Réseau         | IPv4      | TTL                 | …                      |
-| 2 — Liaison        | Ethernet  | MAC source          | …                      |
-| 2 — Liaison        | Ethernet  | MAC destination     | …                      |
-| 1 — Physique       | —         | (non visible)       | —                      |
+| Couche OSI        | Protocole | Champ observé     | Valeur dans ma capture |
+| ----------------- | --------- | ----------------- | ---------------------- |
+| 7 — Application   | HTTP      | Méthode et chemin | GET /                  |
+| 4 — Transport     | TCP       | Port source       | 59832                  |
+| 4 — Transport     | TCP       | Port destination  | 80                     |
+| 3 — Réseau        | IPv4      | IP source         | 172.20.1.50            |
+| 3 — Réseau        | IPv4      | IP destination    | 172.20.0.10            |
+| 3 — Réseau        | IPv4      | TTL               | 64                     |
+| 2 — Liaison       | Ethernet  | MAC source        | 36:c7:11:ca:ca:cb      |
+| 2 — Liaison       | Ethernet  | MAC destination   | a2:71:01:db:e0:1d      |
+| 1 — Physique      | —         | (non visible)     | —                      |
 
 **Question B.2.** Le port destination est `80`. Que désigne-t-il ? Le port source est un grand
 nombre (ex. `52790`) : qui l'a choisi, et pourquoi n'est-il pas toujours le même ?
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _Le port destination 80 désigne le service HTTP. Le port source (ici `59832` dans ma capture) est un port éphémère choisi par le système d'exploitation du client au moment où il ouvre la connexion. Il n'est pas toujours le même car l'OS en attribue un nouveau, libre, dans la plage des ports dynamiques (> 1024) à chaque nouvelle connexion. Cela permet de distinguer plusieurs connexions simultanées vers un même serveur, puisqu'une connexion TCP est identifiée par le quadruplet IP source / port source / IP destination / port destination._
 
 **Question B.3.** La **MAC destination** est-elle celle du site web `internet` ? À quelle machine
 appartient-elle ? (Comparez avec `ip neigh` dans le terminal client, et repensez à l'exercice 1.)

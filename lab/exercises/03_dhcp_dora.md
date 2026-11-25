@@ -89,7 +89,13 @@ Qui vous l'a donnée ?
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _DHCPDISCOVER on eth0 to 255.255.255.255 port 67 interval 8
+DHCPOFFER of 172.20.1.167 from 172.20.1.2
+DHCPREQUEST for 172.20.1.167 on eth0 to 255.255.255.255 port 67
+DHCPACK of 172.20.1.167 from 172.20.1.2
+bound to 172.20.1.167 -- renewal in 20165 seconds.
+
+Le client a obtenu l'ip 172.20.1.167 du serveur DHCP (172.20.1.2)._
 
 ### Étape 5 — Analyser les 4 messages
 

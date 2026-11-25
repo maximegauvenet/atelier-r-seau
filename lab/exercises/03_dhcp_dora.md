@@ -116,28 +116,29 @@ Le client a obtenu l'ip 172.20.1.167 du serveur DHCP (172.20.1.2)._
 
 **Question B.2.** Complétez le tableau DORA avec **votre** capture :
 
-| Étape       | IP source | IP destination    | MAC destination   | Type DHCP (opt 53) | Transaction ID |
-| ----------- | --------- | ----------------- | ----------------- | ------------------ | -------------- |
-| 1. Discover | `0.0.0.0` | `255.255.255.255` | …                 | …                  | …              |
-| 2. Offer    | …         | …                 | …                 | …                  | …              |
-| 3. Request  | …         | …                 | …                 | …                  | …              |
-| 4. ACK      | …         | …                 | …                 | …                  | …              |
+| Étape       | IP source    | IP destination    | MAC destination     | Type DHCP (opt 53) | Transaction ID |
+| ----------- | ------------ | ----------------- | ------------------- | ------------------ | -------------- |
+| 1. Discover | `0.0.0.0`    | `255.255.255.255` | `ff:ff:ff:ff:ff:ff` | `1` (DISCOVER)     | `0x3980153d`   |
+| 2. Offer    | `172.20.1.2` | `172.20.1.167`    | `72:d8:82:f1:80:fd` | `2` (OFFER)        | `0x3980153d`   |
+| 3. Request  | `0.0.0.0`    | `255.255.255.255` | `ff:ff:ff:ff:ff:ff` | `3` (REQUEST)      | `0x3980153d`   |
+| 4. ACK      | `172.20.1.2` | `172.20.1.167`    | `72:d8:82:f1:80:fd` | `5` (ACK)          | `0x3980153d`   |
 
 **Question B.3.** Dans le paquet **Offer** (n°2), relevez la configuration proposée par le serveur :
 
-| Information              | Option DHCP | Valeur |
-| ------------------------ | ----------- | ------ |
-| Adresse IP proposée      | (yiaddr)    | …      |
-| Masque de sous-réseau    | 1           | …      |
-| Passerelle (routeur)     | 3           | …      |
-| Serveurs DNS             | 6           | …      |
-| Durée du bail (secondes) | 51          | …      |
+| Information              | Option DHCP | Valeur                |
+| ------------------------ | ----------- | --------------------- |
+| Adresse IP proposée      | (yiaddr)    | `172.20.1.167`        |
+| Masque de sous-réseau    | 1           | `255.255.255.0`       |
+| Passerelle (routeur)     | 3           | `172.20.1.254`        |
+| Serveurs DNS             | 6           | `1.1.1.1`, `8.8.8.8`  |
+| Durée du bail (secondes) | 51          | `43200`               |
 
 Convertissez la durée du bail en heures.
 
 > 💬 **Votre réponse (conversion) :**
 >
-> _Remplacez ce texte par votre réponse._
+> _43200 s ÷ 3600 = **12 heures**.
+> Le bail dure donc 12 h. Le client devra le renouveler (généralement à 50 % du bail, soit après 6 h) auprès du serveur DHCP `172.20.1.2`._
 
 ---
 

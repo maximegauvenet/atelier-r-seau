@@ -180,7 +180,7 @@ a-t-il associée à l'IP attribuée ?
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _72:d8:82:f1:80:fd_
 
 ---
 
@@ -190,28 +190,28 @@ a-t-il associée à l'IP attribuée ?
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _Pour signaler qu'il n'a pas d'adresse IP._
 
 **Question D.2.** Pourquoi le Discover est-il envoyé à `255.255.255.255` et à la MAC `ff:ff:ff:ff:ff:ff` ?
 Que signifient ces adresses ?
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _Pour rechercher sur tout le réseau._
 
 **Question D.3.** À quoi sert le **Transaction ID**, identique dans les 4 messages ?
 (Imaginez 30 PC qui démarrent en même temps sur le même réseau.)
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _Le Transaction ID sert à identifier chaque échange DHCP de façon unique afin que, lorsque 30 PC démarrent en même temps et reçoivent les réponses en diffusion (broadcast), chaque ordinateur puisse reconnaître les messages qui lui sont destinés._
 
 **Question D.4.** Que se passe-t-il quand le **bail expire** ? Pourquoi les baux ont-ils une durée
 limitée plutôt qu'infinie ?
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _Les baux ont une durée limitée afin de libérer et recycler automatiquement les adresses IP des appareils qui quittent le réseau, évitant ainsi de manquer d'adresses pour les nouveaux arrivants._
 
 ---
 

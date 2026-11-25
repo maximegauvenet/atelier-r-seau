@@ -47,7 +47,7 @@ ping -c 2 172.20.1.254
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _Le client n'a plus de configuration IP donc il ne peut plus communiquer sur le réseau._
 
 ---
 

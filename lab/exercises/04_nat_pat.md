@@ -109,30 +109,30 @@ tcp 6 119 TIME_WAIT src=172.20.1.50 dst=172.20.0.10 sport=52942 dport=80 src=172
 
 **Question B.1.** Recopiez **une** ligne de votre table et complétez :
 
-| Sens   | IP source | IP destination | Port source | Port destination |
-| ------ | --------- | -------------- | ----------- | ---------------- |
-| Aller  | …         | …              | …           | …                |
-| Retour | …         | …              | …           | …                |
+| Sens   | IP source      | IP destination | Port source | Port destination |
+| ------ | -------------- | -------------- | ----------- | ---------------- |
+| Aller  | `172.20.1.128` | `172.20.0.10`  | `51518`     | `80`             |
+| Retour | `172.20.0.10`  | `172.20.0.254` | `80`        | `51518`          |
 
 Dans le sens **retour**, à quelle adresse le serveur répond-il ? Qui fait la traduction vers le client ?
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _Le serveur répond à `172.20.0.254`, l'adresse du routeur, car il ne connaît pas l'IP privée du client. C'est le routeur NAT qui fait la traduction : grâce à sa table `conntrack`, il renvoie la réponse à `172.20.1.128`._
 
 **Question B.2.** Combien de lignes voyez-vous pour vos 3 requêtes ? Les **ports source** sont-ils
 identiques ? Pourquoi est-ce indispensable quand plusieurs PC partagent la même adresse publique ?
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _Je vois 3 lignes, une par requête. Les ports source sont différents (`51502`, `51518`, `51534`). C'est indispensable car tous les PC partagent la même adresse : le port permet au routeur de savoir à quel PC renvoyer chaque réponse._
 
 **Question B.3.** On parle de **PAT** (*Port Address Translation*) quand plusieurs machines partagent
 **une seule** IP publique grâce aux ports. Notre routeur fait-il du NAT simple ou du PAT ? Justifiez.
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _Notre routeur fait du PAT : tous les clients sortent avec la même adresse (`172.20.0.254`) et le routeur les distingue grâce aux ports._
 
 ---
 
